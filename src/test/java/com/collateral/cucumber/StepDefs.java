@@ -25,8 +25,8 @@ public class StepDefs extends SpringIntegrationTest {
                 latestResponse.getBody(), currentStatusCode.value(), is(arg0));
     }
 
-    @And("the cllient receives server version {double}")
-    public void theCllientReceivesServerVersion(int arg0, int arg1) {
+    @And("the cllient receives server version {string}")
+    public void theCllientReceivesServerVersion(String arg0) {
         assertThat(latestResponse.getBody(), is(arg0));
     }
 }

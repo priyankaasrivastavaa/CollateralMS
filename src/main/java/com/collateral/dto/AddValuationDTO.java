@@ -1,7 +1,17 @@
 package com.collateral.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
+@JsonSerialize
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class AddValuationDTO {
+
+    @JsonProperty("collateralId")
     private String collateralId;
+
+    @JsonProperty("valuationStatus")
     private Status valuationStatus;
 
     public String getCollateralId() {

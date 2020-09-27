@@ -2,7 +2,9 @@ package com.collateral.builder;
 
 import com.collateral.dto.CollateralDTO;
 import com.collateral.entity.Collateral;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CollateralBuilder {
 
     public CollateralDTO build(Collateral collateral) {

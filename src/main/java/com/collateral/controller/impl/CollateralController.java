@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -24,7 +25,7 @@ public class CollateralController implements ICollateralController {
 
     @Override
     @PostMapping("/collateral/addvaluation")
-    public void addValuation(AddValuationDTO addValuationDTO) throws CollateralException {
+    public void addValuation(@RequestBody AddValuationDTO addValuationDTO) throws CollateralException {
         if (StringUtils.isEmpty(addValuationDTO.getCollateralId())) {
             throw new CollateralException("Collateral Id cannot be null");
         }

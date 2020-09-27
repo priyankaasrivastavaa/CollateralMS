@@ -2,7 +2,6 @@ package com.collateral.cucumber;
 
 import com.collateral.CollateralMsApplication;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.http.HttpMethod;
@@ -22,8 +21,7 @@ import java.util.Map;
 public class SpringIntegrationTest {
     static ResponseResults latestResponse = null;
 
-    @Autowired
-    protected RestTemplate restTemplate;
+    protected RestTemplate restTemplate = new RestTemplate();
 
     void executeGet(String url) {
         final Map<String, String> headers = new HashMap<>();
