@@ -1,8 +1,8 @@
 package com.collateral.controller.impl;
 
+import com.collateral.dto.AddValuationDTO;
 import com.collateral.dto.CollateralDTO;
 import com.collateral.entity.Collateral;
-import com.collateral.entity.Status;
 import com.collateral.exception.CollateralException;
 import com.collateral.service.ICollateralService;
 import com.collateral.service.impl.CollateralService;
@@ -24,11 +24,11 @@ public class CollateralController implements ICollateralService {
 
     @Override
     @PostMapping("/collateral/addvaluation")
-    public void addValuation(String collateralId, Status valuationStatus) throws CollateralException {
-        if (StringUtils.isEmpty(collateralId)) {
+    public void addValuation(AddValuationDTO addValuationDTO) throws CollateralException {
+        if (StringUtils.isEmpty(addValuationDTO.getCollateralId())) {
             throw new CollateralException("Collateral Id cannot be null");
         }
-        service.addValuation(collateralId, valuationStatus);
+        service.addValuation(addValuationDTO.getCollateralId(), addValuationDTO.getValuationStatus());
     }
 
     @GetMapping("/collateral/{collateralId}")
