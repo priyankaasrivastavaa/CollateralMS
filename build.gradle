@@ -28,7 +28,7 @@ dependencies {
 	compile group: 'io.cucumber', name: 'cucumber-java', version: '6.7.0'
 	compile group: 'commons-io', name: 'commons-io', version: '2.6'
 	compile group: 'io.cucumber', name: 'cucumber-core', version: '6.7.0'
-
+	compile group: 'de.monochromata.cucumber', name: 'reporting-plugin', version: '4.0.84'
 }
 
 test {

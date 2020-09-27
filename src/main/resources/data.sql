@@ -6,6 +6,5 @@
 --  valuation_status VARCHAR(250) DEFAULT NULL
 --);
 
-insert into collateral(id, collateral_type, val_id, created_date, last_updated_date)
-values (1, 'residential', 11, now(), now()),
-(2, 'rural', 22, now(), now());
+insert into collateral(id, collateral_type, val_id, valuation_status, created_date, last_updated_date)
+values (1, 'residential', 11, 'IN_PROGRESS', now(), now());
