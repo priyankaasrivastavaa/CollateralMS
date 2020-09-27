@@ -1,10 +1,10 @@
 package com.collateral.controller.impl;
 
+import com.collateral.controller.ICollateralController;
 import com.collateral.dto.AddValuationDTO;
 import com.collateral.dto.CollateralDTO;
 import com.collateral.entity.Collateral;
 import com.collateral.exception.CollateralException;
-import com.collateral.service.ICollateralService;
 import com.collateral.service.impl.CollateralService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
@@ -18,7 +18,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin("*")
-public class CollateralController implements ICollateralService {
+public class CollateralController implements ICollateralController {
     @Autowired
     private CollateralService service;
 

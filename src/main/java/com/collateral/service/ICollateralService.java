@@ -1,14 +1,14 @@
 package com.collateral.service;
 
-import com.collateral.dto.AddValuationDTO;
 import com.collateral.dto.CollateralDTO;
+import com.collateral.dto.Status;
 import com.collateral.entity.Collateral;
 import com.collateral.exception.CollateralException;
 
 import java.util.List;
 
 public interface ICollateralService {
-    void addValuation(AddValuationDTO addValuationDTO) throws CollateralException;
+    void addValuation(String collateralId, Status valuationStatus) throws CollateralException;
 
     CollateralDTO getCollateralDetails(String collateralId) throws CollateralException;
 

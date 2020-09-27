@@ -2,8 +2,8 @@ package com.collateral.service.impl;
 
 import com.collateral.builder.CollateralBuilder;
 import com.collateral.dto.CollateralDTO;
+import com.collateral.dto.Status;
 import com.collateral.entity.Collateral;
-import com.collateral.entity.Status;
 import com.collateral.exception.CollateralException;
 import com.collateral.repository.CollateralRepository;
 import com.collateral.service.ICollateralService;
@@ -28,7 +28,7 @@ public class CollateralService implements ICollateralService {
             throw new CollateralException(String.
                     format("Collateral not forund for collateral id ; %s", collateralId));
         }
-        entity.setValuationStatus(Status.COMPLETED.toString());
+        entity.setValuationStatus(valuationStatus.toString());
         repository.save(entity);
     }
 

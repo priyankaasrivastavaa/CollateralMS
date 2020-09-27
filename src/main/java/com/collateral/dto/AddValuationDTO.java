@@ -1,7 +1,5 @@
 package com.collateral.dto;
 
-import com.collateral.entity.Status;
-
 public class AddValuationDTO {
     private String collateralId;
     private Status valuationStatus;

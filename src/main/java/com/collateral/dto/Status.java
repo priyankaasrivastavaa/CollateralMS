@@ -1,4 +1,4 @@
-package com.collateral.entity;
+package com.collateral.dto;
 
 public enum Status {
     COMPLETED,
